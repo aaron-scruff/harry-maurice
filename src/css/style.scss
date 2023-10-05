@@ -1,12 +1,35 @@
-$color: rebeccapurple;
+$black: #252B2F;
+$white: #fff;
+$cream-lt: #F5E4C9;
+$cream-dk: #EAC282;
+$green: #C6DAB7;
+$red: #C1331D;
+
+$regular: 'outfitregular', helvetica, sans-serif;
+$medium: 'outfitmedium', helvetica, sans-serif;
+$semibold: 'outfitsemibold', helvetica, sans-serif;
+$bold: 'outfitbold', helvetica, sans-serif; 
 
 body {
-  font-family: system-ui;
-  background-color: #f9f9f9;
+  font-family: $regular;
+  background-color: #fff;
 }
 
 h1 {
-  color: $color;
+  color: $black;
   width: fit-content;
   margin-inline: auto;
+}
+
+nav {
+  position: fixed;
+  right: 80px;
+  top: 70px;
+  
+  ul {
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  }
 }
