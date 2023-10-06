@@ -6,6 +6,7 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ '/css/fonts.css' | url }}" />
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/grid.css' | url }}" />
   </head>
   <body>
     <header>
@@ -14,14 +15,28 @@
           <li><a href="#theclub">The club</a></li>
           <li><a href="#theclub">Who we are</a></li>
           <li><a href="#theclub">Join the waitlist</a></li>
-          <li><a href="https://google.com" target="_blank">Facebook</a></li>
-          <li><a href="https://google.com" target="_blank">Instagram</a></li>
+          <li class="icon"><a href="https://google.com" target="_blank"><img src="assets/images/icon-fb.svg" alt="Facebook" height="22" /></a></li>
+          <li class="icon"><a href="https://google.com" target="_blank"><img src="assets/images/icon-insta.svg" alt="Instagram" height="22" /></a></li>
         </ul>
       </nav>
-      <h1>{{ title }}</h1>
+      <img src="assets/images/logo.svg" alt="Maurice and Harry" height="365" class="logo" />
     </header>
     <main>
       {{ something }}
+      
+      <div class="grid">
+        <div class="col-12 col-md-7">
+          <img src="assets/images/polaroids.png" alt="Our journey" height="648" class="polaroids" />
+        </div>
+        <div class="col-12 col-md-5">
+          <h1>
+            <span>We're almost</span>
+            <span class="line2">ready for our</span>
+            <span class="line3"><em>first</em> box <strong>&#129395;</strong></span>
+          </h1>
+        </div>
+      </div>
+      
     </main>
   </body>
 </html>
