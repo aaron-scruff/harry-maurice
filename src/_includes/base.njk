@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ '/css/fonts.css' | url }}" />
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
     <link rel="stylesheet" href="{{ '/css/grid.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
   </head>
   <body>
     <header>
@@ -22,11 +22,11 @@
       <img src="assets/images/logo.svg" alt="Maurice and Harry" height="365" class="logo" />
     </header>
     <main>
-      {{ something }}
-      
+<!--      {{ something }}-->
       <div class="grid">
         <div class="col-12 col-md-7">
           <img src="assets/images/polaroids.png" alt="Our journey" height="648" class="polaroids" />
+          <a href="https://google.com" target="_blank" class="insta-link">Follow our story on Instagram</a>
         </div>
         <div class="col-12 col-md-5">
           <h1>
@@ -34,9 +34,64 @@
             <span class="line2">ready for our</span>
             <span class="line3"><em>first</em> box <strong>&#129395;</strong></span>
           </h1>
+          <a href="#" class="join"></a>
         </div>
       </div>
       
+      <section class="club">
+        <div class="grid">
+          <div class="col-12 col-md-12">
+            <h2>The Club</h2>
+            <p class="lead">The club is a privileged circle of amateur wine lovers, curious and eager to discover new flavours and, occasionally, exclusive cuvées.</p>
+          </div>
+          <div class="col-6 col-md-6">
+            <p>Each month, we carefully curate a collection of wines packaged in a convenient box, which we can deliver directly to your doorstep or to a location of your preference.</p>
+            <p>The club represents an immersion in the wines of the various regions of the south of France and we invite you to discover their cuvées and their vineyards.</p>
+          </div>
+          <div class="col-6 col-md-6">
+            <p>Our winemakers are, like us, passionate, self-demanding, lovers of the land that they know so well, thanks to many years, sometimes centuries of experience.</p>
+            <p>We’re available and ready to answer your questions and respond to your specific needs. We are also open to providing wine for your events such as family reunions, weddings, and more.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="who">
+        <div class="grid">
+          <div class="col-6 col-md-6">
+            <h2>Who we are</h2>
+            <p class="lead-alt">From the tiny village in the south of France where our friendship was born, we have decided to help you truly discover the wines and the region</p>
+            <p>Greg, the Englishman and technologist, has lived in the south of France for many years. Over time he's discovered the wines and the rich character of the region.</p>
+            <p>Laurent, the Frenchman and sommelier, is from the Uzège and his work is literally in wine. With decades of experience in hospitality, the restaurant trade and, later, as a specialist wine merchant, he loves to share his passion for wine.</p>
+          </div>
+          <div class="col-6 col-md-6">
+            <img src="assets/images/photos.png" alt="Greg and Laurent" height="435" />
+          </div>
+        </div>
+      </section>
+      
+      <section class="signup">
+        <div class="grid">
+          <div class="col-12 col-md-12">
+            <h2>Join the waitlist</h2>
+            <form>
+              <label for="firstname">First name</label><br>
+              <input type="text" id="firstname" name="firstname"><br>
+              <label for="surname">Surname</label><br>
+              <input type="text" id="surname" name="surname">
+              <label for="email">Email address</label><br>
+              <input type="text" id="email" name="email">
+              <label for="winepref">Wine preference</label><br>
+              <input type="radio" id="white" name="winepref" value="white">
+              <label for="winepref">White</label>
+              <input type="radio" id="red" name="winepref" value="red">
+              <label for="css">Red</label>
+              <input type="radio" id="mixed" name="winepref" value="mixed">
+              <label for="javascript">Mixed</label>
+              <input type="submit" value="Sign me up">
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
