@@ -31,6 +31,10 @@ a {
 p {
   font-size: 18px;
   line-height: 1.4em;
+  
+  &.right {
+    text-align: right;
+  }
 }
 
 .logo {
@@ -41,7 +45,7 @@ p {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   right: 80px;
   top: 70px;
   
@@ -136,6 +140,10 @@ main .grid {
     margin: 290px auto auto 20%;
     padding-top: 125px;
   }
+  
+  .title {
+    margin-bottom:20px;
+  }
 }
 
 .lead {
@@ -157,29 +165,145 @@ main .grid {
   .grid {
     width: 60%;
   }
+  
+  .title {
+    margin-bottom: 20px;
+  }
 }
 
 .signup {
   
+  .title {
+    display: block;
+    margin: 0 auto 60px;
+  }
+  
   label {
     display: block;
+    font-size: 20px;
+    padding-bottom:10px;
+    font-family: $medium;
   }
-  input {
-    display:block;
-  }
+  
   input[type=text] {
     width: 100%;
     padding: 20px;
     border: 2px solid $green;
     border-radius: 3px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
   }
   
   .grid {
     width: 30%;
   }
+  
+  .wine-pref {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    
+    .option {
+      display: grid;
+      grid-template-columns: 2em auto;
+      gap: 1em;
+      line-height: 1.5em;
+      font-family: $regular;
+    }
+    
+    input[type="radio"] {
+      /* Add if not using autoprefixer */
+      -webkit-appearance: none;
+      /* Remove most all native input styles */
+      appearance: none;
+      /* For iOS < 15 */
+      background-color: var(--form-background);
+      /* Not removed via appearance */
+      margin: 0;
+
+      font: inherit;
+      color: $green;
+      width: 2em;
+      height: 2em;
+      border: 0.15em solid currentColor;
+      border-radius: 50%;
+      transform: translateY(-0.075em);
+
+      display: grid;
+      place-content: center;
+      
+    }
+    input[type="radio"]::before {
+      content: "";
+      width: 1.2em;
+      height: 1.2em;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 1em var(--form-control-color);
+      /* Windows High Contrast Mode */
+      background-color: $green;
+    }
+    
+    input[type="radio"]:checked::before {
+      transform: scale(1);
+    }
+
+    input[type="radio"]:focus {
+      outline: max(2px, 0.15em) solid currentColor;
+      outline-offset: max(2px, 0.15em);
+    }
+  }
+  
+  input[type="submit"] {
+    display: block;
+    background-color: $black;
+    color: $green;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    padding: 20px 0;
+    font-family: $regular;
+    cursor: pointer;
+    transition: 120ms ease-in-out;
+    
+    &:hover {
+      background: $green;
+      color: $black;
+    }
+    
+    &:active {
+      background: $green;
+      color: $black;
+    }
+  }
 }
 
-
+footer {
+  font-size: 14px;
+  
+  p {
+    font-size: 14px;
+  }
+  
+  .grid {
+    width: 80%;
+    margin: 240px auto 120px;
+  }
+  
+  a {
+    display: inline-block;
+    padding-right: 50px;
+  }
+  
+  img {
+    padding-right: 10px;
+    vertical-align: top;
+  }
+}
 
 
 
